@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车功能实现--LJR</title>
+    <link rel="stylesheet" href="style9.css">
+  
+
+</head>
+
+<body>
+   
+    <div style="width: 100%; overflow-x: auto;">
+    <table id="Table">
+        <!-- 头部 -->
+        <thead>
+            <tr>
+                <th><label><input type="checkbox" class="check-all check">&nbsp;全选</label></th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <!-- 内容部分 -->
+        <tbody>
+            <tr>
+                <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+                <td class="brand"><img src="./images/1.jpg" alt=""><span>卡西欧 EX-TR350</span></td>
+                <td class="price">5999.88</td>
+                <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+                        class="add">+</span></td>
+                <td class="subtotal">5999.88</td>
+                <td class="operation"><span class="delete">删除</span></td>
+            </tr>
+            <tr>
+                <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+                <td class="brand"><img src="./images/2.jpg" alt=""><span>Canon/佳能 PowerShot </span></td>
+                <td class="price">3888.50</td>
+                <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+                        class="add">+</span></td>
+                <td class="subtotal">3888.50</td>
+                <td class="operation"><span class="delete">删除</span></td>
+            </tr>
+            <tr>
+                <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+                <td class="brand"><img src="./images/3.jpg" alt=""><span>Sony/索尼 DSC-WX300</span></td>
+                <td class="price">1428.50</td>
+                <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+                        class="add">+</span></td>
+                <td class="subtotal">1428.50</td>
+                <td class="operation"><span class="delete">删除</span></td>
+            </tr>
+            <tr>
+                <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+                <td class="brand"><img src="./images/4.jpg" alt=""><span>Fujifilm/富士 instax</span></td>
+                <td class="price">640.60</td>
+                <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1" /><span
+                        class="add">+</span></td>
+                <td class="subtotal">640.60</td>
+                <td class="operation"><span class="delete">删除</span></td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+
+    <div class="foot" id="foot">
+        <label class="fl select-all"><input type="checkbox" class="check-all check" />&nbsp;全选</label>
+        <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+        <div class="fr closing">结 算</div>
+        <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+        <div class="fr selected" id="selected">已选商品
+            <span id="selectedTotal">0</span>件
+            <span class="arrow up">︽</span>
+            <span class="arrow down">︾</span>
+        </div>
+        <!-- 这是一个利用选到的图片在JS中添加出来。是隐藏的 -->
+        <div class="selected-view">
+            <div id="selectedViewList" class="clearfix">
+                <!-- 动态添加上去 -->
+                <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+            </div>
+            <span class="arrow">◆<span>◆</span></span>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+<script src="./shopping.js"></script>
+
+</html>
